@@ -13,11 +13,11 @@ In 2019, revenue generated from parking citations accounted for approximately 1.
 **Goal:** The goal of the following project is to examine the longitudinal trends of parking citations and daily parking revenue, and to use this information to inform the training of a time series projection model to predict daily citation revenue for the forthcoming quarter.
 
 ## Data
-The data for the present project includes all parking citations issued from the Los Angeles Department of Transportation over the past several years. A regularly updated version of this data can be found on data.lacity.org, or a snapshot of the data used can be found on in this repository.
+The data for the present project includes all parking citations issued from the Los Angeles Department of Transportation over the past several years. A regularly updated version of this data can be found on “[data.lacity.org](https://data.lacity.org/Transportation/Parking-Citations/wjz9-h9np)”, or a snapshot of the data used can be found on in this repository.
 
-The data includes information on approximately 14.5 million parking citations. For the purposes of this project data was selected from January 2015 through March 2022. Fine amount, date issued, time issued were isolated and cleaned. Then these variables were used to generate variables for year, month, day of the year, day of the month, day of the week, week of the year, holidays, weekends, hour of the day, and minute of the hour. For the purposes of the time series model, day of year, and year were scaled down as to not lead to over-weighting of those variables. The final data used for analyses included information on ___________ citations
+The data includes information on approximately 14.5 million parking citations. For the purposes of this project data was selected from January 2015 through March 2022. Fine amount, date issued, time issued were isolated and cleaned. Then these variables were used to generate variables for year, month, day of the year, day of the month, day of the week, week of the year, holidays, weekends, hour of the day, and minute of the hour. For the purposes of the time series model, day of year, and year were scaled down as to not lead to over-weighting of those variables. The final data used for analyses included information on 14,318,250 citations
 
-*Note:* For the purposes of this project, revenue refers to the cumulative value of all citations issued during a given period of time. Actual final revenue that can be attributed to that period of time depends on final payments from cited individuals.
+> *Note:* For the purposes of this project, revenue refers to the cumulative value of all citations issued during a given period of time. Actual final revenue that can be attributed to that period of time depends on final payments from cited individuals.
 
 ## LA Parking Citations Overview
 With an initial examination of parking citation distributions, it appears that on average citations typically cost around $71, but range from $0 to rare instances in the low thousands. The median parking citations issued per day is a little under 7000. Together this average cost and volume results in a median cumulative daily revenue of slightly under $500,000. However, some days result in very little revenue, while others even surpass $1,000,000.
@@ -75,10 +75,10 @@ Finally, within each hour, specific minutes can also be examined. Interestingly,
 ![Hour of the Day]()
 
 ## Exploratory Analysis Key Takeaways
-Over the past 7 years, trends have been particularly consistent, outside of 2020 (COVID-19).
-The majority of citations are issued during weekdays, with weekends being much lower.
-Q1 has the highest average daily citation volume and average daily revenue
-Holidays result in significantly lower volume and lower revenue.
+- Over the past 7 years, trends have been particularly consistent, outside of 2020 (COVID-19).
+- The majority of citations are issued during weekdays, with weekends being much lower.
+- Q1 has the highest average daily citation volume and average daily revenue
+- Holidays result in significantly lower volume and lower revenue.
 
 ## Quarterly Time Series Prediction
 Leveraging these key takeaways, I aimed to train a time series predictive model that can predict daily citation revenue for the forthcoming quarter (3 months). Given recent literature suggesting the benefit of gradient boosting methods for time series, as well as their ease of tuning, an XGBoost model was trained. Additionally, this type of model allows for easy multivariate inclusion of important factors such as holiday status. After assessing feature importance weights, year and day of year were scaled to not result in over-weighting. Additionally, grid-search hyperparameter searching was used to tune the model. The following visualization compares actual Q1 2022 values with values predicted from the trained model. The model resulted in an RMSE of ________, and a MAPE of _______.
