@@ -13,7 +13,7 @@ In 2019, revenue generated from parking citations accounted for approximately 1.
 **Goal:** The goal of the following project is to examine the longitudinal trends of parking citations and daily parking revenue, and to use this information to inform the training of a time series projection model to predict daily citation revenue for the forthcoming quarter.
 
 ## Data
-The data for the present project includes all parking citations issued from the Los Angeles Department of Transportation over the past several years. A regularly updated version of this data can be found on “[data.lacity.org](https://data.lacity.org/Transportation/Parking-Citations/wjz9-h9np)”, or a snapshot of the data used can be found on in this repository.
+The data for the present project includes all parking citations issued from the Los Angeles Department of Transportation over the past several years. A regularly updated version of this data can be found on [data.lacity.org](https://data.lacity.org/Transportation/Parking-Citations/wjz9-h9np), or a snapshot of the data used can be found on in this repository.
 
 The data includes information on approximately 14.5 million parking citations. For the purposes of this project data was selected from January 2015 through March 2022. Fine amount, date issued, time issued were isolated and cleaned. Then these variables were used to generate variables for year, month, day of the year, day of the month, day of the week, week of the year, holidays, weekends, hour of the day, and minute of the hour. For the purposes of the time series model, day of year, and year were scaled down as to not lead to over-weighting of those variables. The final data used for analyses included information on 14,318,250 citations
 
@@ -69,7 +69,7 @@ Beyond the daily averages previously examined, hourly averages can also be evalu
 
 ![Hour of the Day](https://i.imgur.com/fA5cuuL.png)
 
-## Hour of the Day
+## Minute of the Hour
 Finally, within each hour, specific minutes can also be examined. Interestingly, the each hour typically starts off slow, possibly due to a slight grace period before a citation is issued. A peak number of citations is issued 5 minutes after the beginning of the hour. We then see a consistent and gradual decrease in volume and revenue through the remainder of the hour. However, we see outliers at each 5-minute mark. This is likely accounted for by rounding to the nearest 5-minute mark by the parking monitor.
 
 ![Hour of the Day](https://i.imgur.com/NZ2AQJL.png)
