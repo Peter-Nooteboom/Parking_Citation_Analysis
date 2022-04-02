@@ -1,9 +1,11 @@
 # Parking Citation Revenue Prediction
 ---
 
-![Parking Citation Revenue Prediction](https://i.imgur.com/XoPqJgW.png)
+![Parking Citation Revenue Prediction](https://i.imgur.com/pq7vCxx.png)
 
 In this project I examined average daily parking citations issued in Los Angeles, as well as the revenue that can be attributed to those citations. Additionally, I trained an XGBoost time series model to predict average daily citation revenue in the forthcoming quarter.
+
+> *Note:* This project was completed as part of the larger [Lucky Parking](https://github.com/hackforla/lucky-parking) project from [Hack for LA](https://www.hackforla.org/). 
 
 ## Parking Citations
 In 2019, revenue generated from parking citations accounted for approximately 1.5%, of Los Angeles’s $10 billion budget. Even at that small percentage, parking citations bring in hundreds of millions of dollars for the city. However, on a day-to-day and quarter-to-quarter basis, there are a number of global, local, and seasonal factors that can lead to unpredictability in revenue attributable to those citations.
